@@ -1,5 +1,10 @@
-package programmers_lv0;
-
-public class n보다_커질_때까지_더하기 {
-
+class Solution {
+    public int solution(int[] numbers, int n) {
+        int answer = 0;
+        int i=0;
+        while(answer<=n){
+            answer += numbers[i++];
+        }
+        return answer;
+    }
 }
