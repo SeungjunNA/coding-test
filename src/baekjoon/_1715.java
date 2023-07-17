@@ -11,8 +11,11 @@ public class _1715 {
         
         for(int i=0;i<n;i++) pq.add(Integer.parseInt(br.readLine()));
         while(pq.size()>1){
-            pq.add(pq.poll()+pq.poll());
-            result += pq.peek();
+            int a = pq.poll();
+            int b = pq.poll();
+            result += a+b;
+            
+            pq.add(a+b);
         }
         System.out.println(result);
     }
