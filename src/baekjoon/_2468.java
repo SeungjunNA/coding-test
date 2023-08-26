@@ -2,6 +2,7 @@ package baekjoon;
 
 import java.util.*;
 import java.io.*;
+//dfs
 public class _2468 {
     static int[][] matrix;
     static boolean[][] visit;
@@ -59,3 +60,85 @@ public class _2468 {
         }
     }
 }
+
+//bfs
+//import java.util.*;
+//import java.io.*;
+//public class _2468 {
+//    static int N;
+//    static int[][] matrix;
+//    static boolean[][] visit;
+//    static LinkedList<Matrix> queue;
+//    static int[] x_move = {1,0,-1,0};
+//    static int[] y_move = {0,1,0,-1};
+//    public static void main(String args[]) throws IOException{
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        N = Integer.parseInt(br.readLine());
+//        
+//        matrix = new int[N][N];
+//        
+//        int low = 101;
+//        int high = 0;
+//        for(int i=0;i<N;i++){
+//            StringTokenizer st = new StringTokenizer(br.readLine());
+//            for(int j=0;j<N;j++){
+//                matrix[i][j] = Integer.parseInt(st.nextToken());
+//                if(high<matrix[i][j]) high = matrix[i][j];
+//                if(low>matrix[i][j]) low = matrix[i][j];
+//            }
+//        }
+//        
+//        int max = 1;
+//        for(int i=low;i<high;i++){
+//            visit = new boolean[N][N];
+//            rain(i);
+//            int count = 0;
+//            for(int j=0;j<N;j++){
+//                for(int k=0;k<N;k++){
+//                    if(!visit[j][k]){
+//                        bfs(j,k);
+//                        count++;
+//                    }
+//                }
+//            }
+//            if(max<count) max = count;
+//        }
+//        
+//        System.out.println(max);
+//    }
+//    static void rain(int k){
+//        for(int i=0;i<N;i++){
+//            for(int j=0;j<N;j++){
+//                if(matrix[i][j]<=k){
+//                    visit[i][j] = true;
+//                }
+//            }
+//        }
+//    }
+//    static void bfs(int x, int y){
+//        visit[x][y] = true;
+//        queue = new LinkedList<>();
+//        queue.add(new Matrix(x,y));
+//        
+//        while(!queue.isEmpty()){
+//            Matrix mx = queue.poll();
+//            for(int i=0;i<4;i++){
+//                int X = mx.x+x_move[i];
+//                int Y = mx.y+y_move[i];
+//                if(X>=0&&Y>=0 && X<N&&Y<N){
+//                    if(!visit[X][Y]){
+//                        visit[X][Y] = true;
+//                        queue.add(new Matrix(X,Y));
+//                    }
+//                }
+//            }
+//        }
+//    }
+//    static class Matrix{
+//        int x, y;
+//        Matrix(int x, int y){
+//            this.x = x;
+//            this.y = y;
+//        }
+//    }
+//}
