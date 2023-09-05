@@ -2,7 +2,7 @@ package swea_D3;
 
 import java.util.*;
 import java.io.*;
-class _1일차_View
+class _1206_1일차_View
 {
     public static void main(String args[]) throws Exception
     {

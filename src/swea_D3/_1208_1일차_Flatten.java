@@ -2,7 +2,7 @@ package swea_D3;
 
 import java.util.*;
 import java.io.*;
-class _1일차_Flatten
+class _1208_1일차_Flatten
 {
 	public static void main(String args[]) throws Exception
 	{
