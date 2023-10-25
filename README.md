@@ -1,6 +1,6 @@
 # 문제 풀이 목록
 
-[백준]()
+[백준](https://github.com/SeungjunNA/coding-test/tree/master/src/baekjoon)
 
 
 [프로그래머스 lv0](https://github.com/SeungjunNA/coding-test/tree/master/src/programmers_lv0)
