@@ -15,4 +15,10 @@
 [프로그래머스 lv3](https://github.com/SeungjunNA/coding-test/tree/master/src/programmers_lv3)
 
 
-[swea]
+[swea D1](https://github.com/SeungjunNA/coding-test/tree/master/src/swea_D1)
+
+
+[swea D2](https://github.com/SeungjunNA/coding-test/tree/master/src/swea_D2)
+
+
+[swea D3](https://github.com/SeungjunNA/coding-test/tree/master/src/swea_D3)
