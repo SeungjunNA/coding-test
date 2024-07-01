@@ -1,28 +1,28 @@
 package baekjoon;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class _11047 {
 
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		int n = scan.nextInt();
-		int k = scan.nextInt();
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int N = Integer.parseInt(st.nextToken());
+		int K = Integer.parseInt(st.nextToken());
 		int count = 0;
+		int[] arr = new int[N];
 		
-		int[] coin = new int[k];
-		for(int i=0;i<n;i++) {
-			coin[i] = scan.nextInt();
+		for(int i=0;i<N;i++) {
+			arr[i] = Integer.parseInt(br.readLine());
 		}
-		
-		for(int i=n-1;i>=0;i--) {
-			if(k/coin[i] > 0) {
-				count += k/coin[i];
-				k -= k/coin[i] * coin[i];
-			}
+		for(int i=N-1;i>=0;i--) {
+			count += K/arr[i];
+			K -= (K/arr[i]) * arr[i];
 		}
 		
 		System.out.println(count);
 	}
-
 }
