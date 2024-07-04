@@ -8,16 +8,16 @@ public class _1927 {
         int n = Integer.parseInt(br.readLine());
         
         StringBuilder sb = new StringBuilder();
-        PriorityQueue<Integer> q = new PriorityQueue<Integer>();
-        for(int i=0;i<n;i++){
-            int x = Integer.parseInt(br.readLine());
-            if(x==0){
-                if(q.isEmpty()) sb.append(0).append("\n");
-                else sb.append(q.poll()).append("\n");
-            }else{
-                q.add(x);
-            }
+        Queue<Integer> pq = new PriorityQueue<>();
+        for(int i=0;i<n;i++) {
+        	int k = Integer.parseInt(br.readLine());
+        	if(k==0) {
+        		if(pq.isEmpty()) sb.append(0+"\n");
+        		else sb.append(pq.poll()+"\n");
+        	}else {
+        		pq.add(k);
+        	}
         }
-        System.out.println(sb);
+        System.out.println(sb.toString());
     }
 }
